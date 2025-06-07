@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #000000;
+  --foreground: #888888;
+  --primary: #ffffff;
+  --title: #888888;
+  --body: #888888;
+  --hover-color: #111111;
+  --accent: #0070f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #888888;
+    --primary: #ffffff;
+    --title: #888888;
+    --body: #888888;
+    --hover-color: #111111;
+    --accent: #0070f3;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Satoshi', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Instrument Serif', serif;
+}
+
+.font-sans {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-title {
+  color: var(--title);
+}
+
+.text-body {
+  color: var(--body);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-hoverColor {
+  background-color: var(--hover-color);
+}
+
+.selection\:bg-primary *::selection {
+  background-color: var(--accent);
+}
+
+.selection\:text-hoverColor *::selection {
+  color: var(--background);
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
