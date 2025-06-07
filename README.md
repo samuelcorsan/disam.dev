@@ -1,4 +1,4 @@
-# Hey there! 👋 I'm Sam
+# Hey there! 👋 I'm Samuel
 
 This is where I showcase my work, thoughts, and the digital footprints I'm leaving in the tech world. If you're curious about what I do or looking to collaborate, you're in the right place.
 
