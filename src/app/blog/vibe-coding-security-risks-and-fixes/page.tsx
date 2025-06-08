@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import Code from "@/components/Code";
 
-export default function WhyWeBuiltShipFreePost() {
+export default function VibeCodingSecurityRisksAndFixes() {
   return (
     <>
       <Header showHomeLink={true} />
@@ -28,7 +28,7 @@ export default function WhyWeBuiltShipFreePost() {
         <div className="mt-6 prose prose-sm max-w-none prose-headings:text-primary prose-p:text-gray-300 prose-a:text-white prose-a:underline prose-a:decoration-1 prose-a:underline-offset-4 prose-a:font-medium prose-a:mx-1 prose-li:text-foreground prose-ol:text-foreground prose-ul:text-foreground">
           <Image
             src="/images/vibe-coding-bugs.png"
-            alt="ShipFree Growth Chart"
+            alt="Vibe coding bugs tendency"
             width={1000}
             height={1000}
             className="w-full rounded-lg shadow-lg !mb-2"

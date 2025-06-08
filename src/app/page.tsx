@@ -19,7 +19,7 @@ const projects = [
     id: 2,
     title: "Growth Race",
     description: "Earn money for growing in X (from 10 June to 31 August)",
-    link: "https://growth-race.tech",
+    link: "https://growthrace.org",
   },
 ];
 
