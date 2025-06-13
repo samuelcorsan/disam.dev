@@ -8,15 +8,15 @@ import BlogCard from "@/components/blog-card";
 import Link from "next/link";
 
 const projects = [
-  {
+  /* {
     id: 1,
-    title: "Vision Crafter",
+    title: "VisionCraft",
     description:
       "Create the logo, domain, marketing, roadmap, wireframes, pitches... of your startup. Never worry about marketing again.",
     link: "https://vcrft.com",
-  },
+  },*/
   {
-    id: 2,
+    id: 1,
     title: "Growth Race",
     description: "Earn money for growing in X (from 10 June to 31 August)",
     link: "https://growthrace.org",
