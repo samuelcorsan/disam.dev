@@ -20,6 +20,13 @@ export default function Header() {
         >
           twitter
         </Link>
+        <Link
+          href="https://github.com/samuelcorsan"
+          target="_blank"
+          className="text-blue-600 hover:underline"
+        >
+          github
+        </Link>
       </nav>
     </header>
   );
