@@ -56,14 +56,14 @@ export function LaddaCard() {
       </AnimatePresence>
       <AnimatePresence>
         {active ? (
-          <div className="fixed inset-0 grid place-items-center z-[100]">
+          <div className="fixed inset-0 grid place-items-center z-100">
             <motion.button
               key={`button-close-${id}`}
               layout
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-[101]"
+              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-101"
               onClick={() => setActive(false)}
             >
               <CloseIcon />
@@ -89,15 +89,15 @@ export function LaddaCard() {
                 >
                   <p>
                     reimagining fashion e-commerce. swipe through clothes like
-                    social media, try them on instantly with AI, checkout in
-                    one tap. shopping should feel personal and effortless, not
-                    like work
+                    social media, try them on instantly with AI, checkout in one
+                    tap. shopping should feel personal and effortless, not like
+                    work
                   </p>
                 </motion.div>
 
                 <div className="flex gap-3 justify-center">
                   {media.map((item, index) => (
-                    <div key={index} className="flex-shrink-0 w-[140px]">
+                    <div key={index} className="shrink-0 w-[140px]">
                       {item.type === "video" ? (
                         <video
                           src={item.src}
@@ -138,14 +138,6 @@ export function LaddaCard() {
           ladda
         </motion.span>
       </motion.div>
-      {!active && (
-        <span>
-          {" "}
-          - reimagining fashion e-commerce. swipe through clothes like social
-          media, try them on instantly with AI, checkout in one tap. shopping
-          should feel personal and effortless, not like work
-        </span>
-      )}
     </>
   );
 }
