@@ -32,6 +32,9 @@ export default function Projects() {
             <TechBadge iconSrc="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png">
               Next.js
             </TechBadge>
+            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+              TypeScript
+            </TechBadge>
             <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
               Python
             </TechBadge>
@@ -62,6 +65,9 @@ export default function Projects() {
           <div className="mt-2 flex flex-wrap gap-2">
             <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
               React Native
+            </TechBadge>
+            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+              TypeScript
             </TechBadge>
             <TechBadge iconSrc="https://www.eu-startups.com/wp-content/uploads/2021/12/logo-4.png">
               Qdrant
@@ -106,6 +112,9 @@ export default function Projects() {
           <div className="mt-2 flex flex-wrap gap-2">
             <TechBadge iconSrc="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png">
               Next.js
+            </TechBadge>
+            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+              TypeScript
             </TechBadge>
           </div>
         </div>
