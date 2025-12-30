@@ -15,28 +15,28 @@ export default function Projects() {
           <div className="flex items-center gap-2 mb-2">
             <h3 className="font-semibold text-lg">
               <Link
-                href="https://codestep-xi.vercel.app"
+                href="https://avalio.markets"
                 target="_blank"
                 className="text-blue-600 hover:underline"
               >
-                CodeStep
+                Avalio
               </Link>
             </h3>
           </div>
           <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            looking to bring vibe coding to schools. empowering students to
-            shape their ideas and build real projects, even if they don&apos;t
-            know how to code
+            a stock simulator for students who don&apos;t know about investment.
+            designed like a real broker but for students to start practicing.
+            got used by my school and we&apos;re expanding
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <TechBadge iconSrc="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png">
               Next.js
             </TechBadge>
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
-              TypeScript
+            <TechBadge iconSrc="https://intelligence.financialmodelingprep.com/images/logo/fmp-new-logo.png">
+              FMP
             </TechBadge>
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
-              Python
+            <TechBadge iconSrc="https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2019-09/1f16fbf0-de0a-11e9-9af9-77bfe97840a9">
+              Yahoo Finance API
             </TechBadge>
             <TechBadge
               iconSrc="https://registry.npmmirror.com/@lobehub/icons-static-png/1.74.0/files/dark/groq.png"
@@ -115,6 +115,9 @@ export default function Projects() {
             </TechBadge>
             <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
               TypeScript
+            </TechBadge>
+            <TechBadge iconSrc="https://images.icon-icons.com/2415/PNG/512/mongodb_original_logo_icon_146424.png">
+              MongoDB
             </TechBadge>
           </div>
         </div>
