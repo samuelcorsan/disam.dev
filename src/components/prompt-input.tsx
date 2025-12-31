@@ -1,9 +1,24 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 
 export default function PromptInput() {
   const [input, setInput] = useState("");
+  const [placeholder, setPlaceholder] = useState("Ask me something you would like to know about me");
+
+  useEffect(() => {
+    const updatePlaceholder = () => {
+      if (window.innerWidth < 640) {
+        setPlaceholder("Ask me something...");
+      } else {
+        setPlaceholder("Ask me something you would like to know about me");
+      }
+    };
+
+    updatePlaceholder();
+    window.addEventListener("resize", updatePlaceholder);
+    return () => window.removeEventListener("resize", updatePlaceholder);
+  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,18 +33,18 @@ export default function PromptInput() {
     <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-6 px-6 bg-gradient-to-t from-white/50 to-transparent pt-12">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl flex items-center rounded-full bg-white/80 backdrop-blur-sm shadow-md border border-gray-200 overflow-hidden"
+        className="w-full max-w-xl hover:scale-105 focus-within:max-w-2xl transition-all duration-300 ease-in-out flex items-center rounded-full bg-white/80 backdrop-blur-sm shadow-md border border-gray-200 overflow-hidden pr-2"
       >
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask me something you would like to know about me"
-          className="flex-1 px-6 py-4 bg-transparent text-black focus:outline-none font-mono"
+          placeholder={placeholder}
+          className="flex-1 px-6 py-4 bg-transparent text-black focus:outline-none font-mono min-w-0"
         />
         <button
           type="submit"
-          className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center hover:bg-orange-600 transition-colors mr-2 shrink-0"
+          className="w-12 h-12 rounded-full bg-orange-500 text-white flex items-center justify-center hover:bg-orange-600 transition-colors shrink-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
