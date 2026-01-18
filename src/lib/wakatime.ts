@@ -33,7 +33,6 @@ export async function getAllCodingData(): Promise<AllCodingData> {
 
   const date = new Date().toISOString().split("T")[0];
   
-  // URLs
   const todayUrl = `https://wakatime.com/api/v1/users/current/summaries?start=${date}&end=${date}&timezone=Europe/Madrid`;
   const weekUrl = `https://wakatime.com/api/v1/users/current/stats/last_7_days`;
   const monthUrl = `https://wakatime.com/api/v1/users/current/stats/last_30_days`;
@@ -45,7 +44,6 @@ export async function getAllCodingData(): Promise<AllCodingData> {
       fetchWakaTime(monthUrl, API_KEY),
     ]);
 
-    // Process Today (Summaries)
     const todayData = todayRes.data?.[0];
     const today: CodingData = {
       seconds: todayData?.grand_total?.total_seconds ?? 0,
@@ -56,7 +54,6 @@ export async function getAllCodingData(): Promise<AllCodingData> {
       })),
     };
 
-    // Process Week (Stats)
     const weekData = weekRes.data;
     const week: CodingData = {
       seconds: weekData?.total_seconds ?? 0,
@@ -67,7 +64,6 @@ export async function getAllCodingData(): Promise<AllCodingData> {
       })),
     };
 
-    // Process Month (Stats)
     const monthData = monthRes.data;
     const month: CodingData = {
       seconds: monthData?.total_seconds ?? 0,
