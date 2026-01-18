@@ -4,13 +4,53 @@ import { LaddaCard } from "./ladda-card";
 export default function Projects() {
   return (
     <section>
-      <h2 className="text-2xl font-bold mb-8 tracking-tight">PROJECTS</h2>
+      <h2 className="text-2xl font-bold mb-8 tracking-tight">TIMELINE</h2>
 
       <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-12">
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
           <span className="text-xs font-mono text-neutral-500 mb-1 block">
-            15 years old · 2025
+            15 years old · 2025-2026
+          </span>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="font-semibold text-lg">
+              <LaddaCard />
+            </div>
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">
+              current project
+            </span>
+          </div>
+          <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            reimagining fashion e-commerce. swipe through clothes like social
+            media, try them on instantly with AI, checkout in one tap. shopping
+            should feel personal and effortless, not like work
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
+              React Native
+            </TechBadge>
+            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+              TypeScript
+            </TechBadge>
+            <TechBadge iconSrc="https://www.eu-startups.com/wp-content/uploads/2021/12/logo-4.png">
+              Qdrant
+            </TechBadge>
+            <TechBadge iconSrc="https://storage.googleapis.com/mailersend-website/integrations/supabase-logo-icon.png">
+              Supabase
+            </TechBadge>
+            <TechBadge
+              iconSrc="https://registry.npmmirror.com/@lobehub/icons-static-png/1.74.0/files/dark/groq.png"
+              iconClassName="bg-black rounded-full"
+            >
+              Groq
+            </TechBadge>
+          </div>
+        </div>
+
+        <div className="relative pl-8">
+          <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
+          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+            15 years old · 2025-2026
           </span>
           <div className="flex items-center gap-2 mb-2">
             <h3 className="font-semibold text-lg">
@@ -50,47 +90,7 @@ export default function Projects() {
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
           <span className="text-xs font-mono text-neutral-500 mb-1 block">
-            15 years old · 2025
-          </span>
-          <div className="flex items-center gap-2 mb-2">
-            <div className="font-semibold text-lg">
-              <LaddaCard />
-            </div>
-          </div>
-          <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            reimagining fashion e-commerce. swipe through clothes like social
-            media, try them on instantly with AI, checkout in one tap. shopping
-            should feel personal and effortless, not like work
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
-              React Native
-            </TechBadge>
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
-              TypeScript
-            </TechBadge>
-            <TechBadge iconSrc="https://www.eu-startups.com/wp-content/uploads/2021/12/logo-4.png">
-              Qdrant
-            </TechBadge>
-            <TechBadge iconSrc="https://storage.googleapis.com/mailersend-website/integrations/supabase-logo-icon.png">
-              Supabase
-            </TechBadge>
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png">
-              Nano Banana
-            </TechBadge>
-            <TechBadge
-              iconSrc="https://registry.npmmirror.com/@lobehub/icons-static-png/1.74.0/files/dark/groq.png"
-              iconClassName="bg-black rounded-full"
-            >
-              Groq
-            </TechBadge>
-          </div>
-        </div>
-
-        <div className="relative pl-8">
-          <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
-            14 years old · 2024
+            14 years old · 2024-2026
           </span>
           <div className="flex items-center gap-2 mb-2">
             <h3 className="font-semibold text-lg">
@@ -142,13 +142,44 @@ export default function Projects() {
           <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
             tried to match o1's reasoning using gpt-4o without fine-tuning.
             built iterative chain of thought that refined answers over multiple
-            passes. didn't continue—field was advancing too fast to keep up
+            passes. didn't continue because the field was advancing too fast to
+            keep up
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
             <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png">
               Python
             </TechBadge>
           </div>
+        </div>
+
+        <div className="relative pl-8">
+          <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
+          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+            13-14 years old · 2023-2024
+          </span>
+          <div className="flex items-center gap-2 mb-2">
+            <h3 className="font-semibold text-lg">Freelance Work</h3>
+          </div>
+          <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            worked on various freelance projects, building websites and web
+            applications for clients. learned to work with deadlines, client
+            communication, and turning ideas into real products
+          </p>
+        </div>
+
+        <div className="relative pl-8">
+          <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
+          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+            12 years old · 2022
+          </span>
+          <div className="flex items-center gap-2 mb-2">
+            <h3 className="font-semibold text-lg">Learning Web Development</h3>
+          </div>
+          <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+            learned html, css, and javascript. started building my first web
+            projects and understanding how the web works. this was the
+            foundation that led to everything else
+          </p>
         </div>
 
         <div className="relative pl-8">

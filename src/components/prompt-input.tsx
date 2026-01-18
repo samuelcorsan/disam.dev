@@ -30,17 +30,17 @@ export default function PromptInput() {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-6 px-6 bg-gradient-to-t from-white/50 to-transparent pt-12">
+    <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-6 px-6 bg-gradient-to-t from-white/50 dark:from-black/50 to-transparent pt-12 z-50">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl hover:scale-105 focus-within:max-w-2xl transition-all duration-300 ease-in-out flex items-center rounded-full bg-white/80 backdrop-blur-sm shadow-md border border-gray-200 overflow-hidden pr-2"
+        className="w-full max-w-xl hover:scale-105 focus-within:max-w-2xl transition-all duration-300 ease-in-out flex items-center rounded-full bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md shadow-md border border-gray-200 dark:border-neutral-800 overflow-hidden pr-2"
       >
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={placeholder}
-          className="flex-1 px-6 py-4 bg-transparent text-black focus:outline-none font-mono min-w-0"
+          className="flex-1 px-6 py-4 bg-transparent text-black dark:text-white focus:outline-none font-mono min-w-0 placeholder:text-neutral-500 dark:placeholder:text-neutral-400"
         />
         <button
           type="submit"
