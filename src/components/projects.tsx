@@ -32,7 +32,7 @@ export default function Projects() {
             <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
               TypeScript
             </TechBadge>
-            <TechBadge iconSrc="https://www.eu-startups.com/wp-content/uploads/2021/12/logo-4.png">
+            <TechBadge iconSrc="https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-red.png">
               Qdrant
             </TechBadge>
             <TechBadge iconSrc="https://storage.googleapis.com/mailersend-website/integrations/supabase-logo-icon.png">
