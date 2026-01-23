@@ -15,9 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://disam.dev'),
   title: "Samuel Corsan | 15-year-old full stack developer",
   description:
     "15-year-old full-stack developer from Spain building AI, web, and infrastructure projects. Passionate about startups, learning fast, and creating companies that matter",
+  openGraph: {
+    title: "Samuel Corsan | 15-year-old full stack developer",
+    description:
+      "15-year-old full-stack developer from Spain building AI, web, and infrastructure projects. Passionate about startups, learning fast, and creating companies that matter",
+    type: "website",
+    url: "/",
+    siteName: "Samuel Corsan",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Samuel Corsan | Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Samuel Corsan | 15-year-old full stack developer",
+    description:
+      "15-year-old full-stack developer from Spain building AI, web, and infrastructure projects. Passionate about startups, learning fast, and creating companies that matter",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({
