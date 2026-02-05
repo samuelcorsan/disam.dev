@@ -15,7 +15,7 @@ export default function Projects() {
       <div className="relative border-l border-neutral-200 dark:border-neutral-800 ml-3 space-y-12">
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             15 years old · 2025-2026
           </span>
           <div className="flex items-center gap-2 mb-2">
@@ -57,7 +57,7 @@ export default function Projects() {
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
           <div className="flex gap-4">
             <div className="flex-1">
-              <span className="text-xs font-mono text-neutral-500 mb-1 block">
+              <span className="text-sm font-mono text-neutral-500 mb-1 block">
                 15 years old · 2026
               </span>
               <div className="flex items-center gap-2 mb-2">
@@ -89,7 +89,7 @@ export default function Projects() {
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
           <div className="flex gap-4">
             <div className="flex-1">
-              <span className="text-xs font-mono text-neutral-500 mb-1 block">
+              <span className="text-sm font-mono text-neutral-500 mb-1 block">
                 15 years old · 2025-2026
               </span>
               <div className="flex items-center gap-2 mb-2">
@@ -136,7 +136,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             14 years old · 2024-2026
           </span>
           <div className="flex items-center gap-2 mb-2">
@@ -171,7 +171,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             14 years old · 2024
           </span>
           <div className="flex items-center gap-2 mb-2">
@@ -201,7 +201,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             13-14 years old · 2023-2024
           </span>
           <div className="flex items-center gap-2 mb-2">
@@ -216,7 +216,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             12 years old · 2022
           </span>
           <div className="flex items-center gap-2 mb-2">
@@ -231,7 +231,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-xs font-mono text-neutral-500 mb-1 block">
+          <span className="text-sm font-mono text-neutral-500 mb-1 block">
             9-11 years old · 2020-2022
           </span>
           <div className="flex items-center gap-2 mb-2">
