@@ -4,14 +4,14 @@ import { useState, FormEvent, useEffect } from "react";
 
 export default function PromptInput() {
   const [input, setInput] = useState("");
-  const [placeholder, setPlaceholder] = useState("Ask me something you would like to know about me");
+  const [placeholder, setPlaceholder] = useState("Ask something you would like to know about me");
 
   useEffect(() => {
     const updatePlaceholder = () => {
       if (window.innerWidth < 640) {
-        setPlaceholder("Ask me something...");
+        setPlaceholder("Ask something...");
       } else {
-        setPlaceholder("Ask me something you would like to know about me");
+        setPlaceholder("Ask something you would like to know about me");
       }
     };
 
