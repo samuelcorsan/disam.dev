@@ -55,7 +55,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <span className="text-sm font-mono text-neutral-500 mb-1 block">
                 15 years old · 2026
@@ -78,7 +78,7 @@ export default function Projects() {
               </p>
             </div>
             <ExpandableImage
-              thumbnailSrc="/lotushack.png"
+              thumbnailSrc="/lotushack.webp"
               fullSrc="/lotushack.webp"
               alt="lotushack preview"
             />
@@ -87,7 +87,7 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <span className="text-sm font-mono text-neutral-500 mb-1 block">
                 15 years old · 2025-2026
@@ -136,36 +136,45 @@ export default function Projects() {
 
         <div className="relative pl-8">
           <div className="absolute top-1.5 left-[-5px] h-2.5 w-2.5 rounded-full bg-neutral-300 dark:bg-neutral-700 ring-4 ring-white dark:ring-black" />
-          <span className="text-sm font-mono text-neutral-500 mb-1 block">
-            14 years old · 2024-2026
-          </span>
-          <div className="flex items-center gap-2 mb-2">
-            <h3 className="font-semibold text-lg">
-              <Link
-                href="https://fellows.best/"
-                target="_blank"
-                className="text-blue-600 hover:underline"
-              >
-                fellows.best
-              </Link>
-            </h3>
-            <GitHubIcon href="https://github.com/samuelcorsan/fellows.best" />
-          </div>
-          <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
-            got tired of hunting down tech fellowships across random websites.
-            built a single place to find all the best ones. now other people use
-            it too
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            <TechBadge iconSrc="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png">
-              Next.js
-            </TechBadge>
-            <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
-              TypeScript
-            </TechBadge>
-            <TechBadge iconSrc="https://images.icon-icons.com/2415/PNG/512/mongodb_original_logo_icon_146424.png">
-              MongoDB
-            </TechBadge>
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1">
+              <span className="text-sm font-mono text-neutral-500 mb-1 block">
+                14 years old · 2024-2026
+              </span>
+              <div className="flex items-center gap-2 mb-2">
+                <h3 className="font-semibold text-lg">
+                  <Link
+                    href="https://fellows.best/"
+                    target="_blank"
+                    className="text-blue-600 hover:underline"
+                  >
+                    fellows.best
+                  </Link>
+                </h3>
+                <GitHubIcon href="https://github.com/samuelcorsan/fellows.best" />
+              </div>
+              <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                got tired of hunting down tech fellowships across random websites.
+                built a single place to find all the best ones. now other people use
+                it too
+              </p>
+              <div className="mt-2 flex flex-wrap gap-2">
+                <TechBadge iconSrc="https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png">
+                  Next.js
+                </TechBadge>
+                <TechBadge iconSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png">
+                  TypeScript
+                </TechBadge>
+                <TechBadge iconSrc="https://images.icon-icons.com/2415/PNG/512/mongodb_original_logo_icon_146424.png">
+                  MongoDB
+                </TechBadge>
+              </div>
+            </div>
+            <ExpandableImage
+              thumbnailSrc="/fellows-best.webp"
+              fullSrc="/fellows-best.webp"
+              alt="fellows.best preview"
+            />
           </div>
         </div>
 
@@ -362,7 +371,7 @@ function ExpandableImage({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0, transition: { duration: 0.05 } }}
-              className="flex absolute top-4 right-4 items-center justify-center bg-white dark:bg-neutral-800 rounded-full h-8 w-8 z-[101]"
+              className="flex absolute top-2 right-2 md:top-4 md:right-4 items-center justify-center bg-white dark:bg-neutral-800 rounded-full h-8 w-8 z-[101]"
               onClick={() => setActive(false)}
             >
               <CloseIcon />
@@ -370,7 +379,7 @@ function ExpandableImage({
             <motion.div
               layoutId={`expandable-image-${id}`}
               ref={ref}
-              className="w-full max-w-4xl p-4"
+              className="w-full max-w-4xl p-2 md:p-4"
             >
               <Image
                 src={fullSrc}
@@ -386,15 +395,21 @@ function ExpandableImage({
       <motion.div
         layoutId={`expandable-image-${id}`}
         onClick={() => setActive(true)}
-        className="w-32 shrink-0 cursor-pointer"
+        className="relative w-full md:w-32 shrink-0 cursor-pointer group"
       >
         <Image
           src={thumbnailSrc}
           alt={alt}
           width={128}
           height={72}
-          className="w-full h-auto rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors"
+          className="w-full h-auto rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors blur-[2px] md:blur-none"
         />
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 dark:bg-black/40 rounded-lg md:hidden">
+          <div className="text-center px-4">
+            <p className="text-white text-sm font-medium mb-1">tap to view</p>
+            <p className="text-white/80 text-xs">see full preview</p>
+          </div>
+        </div>
       </motion.div>
     </>
   );
