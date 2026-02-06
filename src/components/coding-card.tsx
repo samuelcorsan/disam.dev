@@ -35,7 +35,7 @@ export default function CodingCard({ data }: { data: AllCodingData }) {
       className="relative overflow-hidden rounded-2xl bg-neutral-50 dark:bg-neutral-900/50 border border-neutral-200 dark:border-neutral-800 pt-5 px-6 pb-6 md:pt-6 md:px-8 md:pb-8"
     >
       {/* Header with Switcher */}
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+      <div className="relative z-10 flex flex-row items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-2">
           <span className="relative flex h-2.5 w-2.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -46,12 +46,12 @@ export default function CodingCard({ data }: { data: AllCodingData }) {
           </span>
         </div>
         {availableRanges.length > 1 && (
-          <div className="flex items-center gap-1 p-1 bg-neutral-200/50 dark:bg-neutral-800/50 rounded-lg">
+          <div className="flex items-center gap-1 p-1 bg-neutral-200/50 dark:bg-neutral-800/50 rounded-lg w-fit shrink-0">
             {availableRanges.map((r) => (
               <button
                 key={r.key}
                 onClick={() => setRange(r.key)}
-                className={`relative px-3 py-1 text-xs font-medium rounded-md transition-colors ${
+                className={`relative px-3 py-1 text-xs font-medium rounded-md transition-colors whitespace-nowrap ${
                   range === r.key
                     ? "text-neutral-900 dark:text-neutral-100"
                     : "text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
