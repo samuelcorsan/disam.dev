@@ -11,9 +11,9 @@ interface MediaItem {
 }
 
 const media: MediaItem[] = [
-  { type: "video", src: "/ladda-demo.mp4" },
+  { type: "video", src: "/ladda-demo-1.mp4" },
+  { type: "video", src: "/ladda-demo-2.mp4" },
   { type: "image", src: "/ladda-1.png" },
-  { type: "image", src: "/ladda-2.png" },
   { type: "image", src: "/ladda-3.png" },
   { type: "image", src: "/ladda-4.png" },
 ];
