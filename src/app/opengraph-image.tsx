@@ -49,7 +49,7 @@ export default async function Image() {
               fontWeight: 'normal',
             }}
           >
-            15-year-old full stack developer
+            16-year-old full stack developer
           </div>
           <div
             style={{

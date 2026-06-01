@@ -33,20 +33,23 @@ export default function About() {
         )}
         <p>
           When I'm not coding, I'm training. I've been practising karate for 7
-          years and currently hold a blue belt
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/BJJ_Blue_Belt.svg/1280px-BJJ_Blue_Belt.svg.png"
-            alt="Blue Belt"
-            className="inline-block h-5 w-auto ml-1.5 align-middle transform -rotate-12 hover:rotate-0 transition-transform duration-300"
-          />
-          . I also play football
+          years and currently hold a blue-brown belt
+          <span className="inline-flex align-middle ml-1.5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/blue-brown.png"
+              alt="Blue-Brown Belt"
+              className="h-10 w-auto transform -rotate-12 hover:rotate-0 transition-transform duration-300"
+            />
+          </span>
+          . I also play{" "}
+          <span className="whitespace-nowrap">football
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://freesvg.org/img/soccer_ball2.png"
             alt="Football"
             className="inline-block h-5 w-5 ml-1.5 mr-1 align-middle hover:translate-x-4 hover:rotate-[360deg] transition-all duration-700 ease-out cursor-pointer"
-          />
+          /></span>
           and enjoy debating current world issues and geopolitics with friends
           to expand my perspective.
         </p>
