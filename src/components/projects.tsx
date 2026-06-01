@@ -79,13 +79,13 @@ const story: Story[] = [
       kind: "polaroid",
       photos: [
         {
-          src: "/caotic-robbers.png",
+          src: "/caotic-robbers.webp",
           caption: "the trailer · 11k views",
           href: "https://www.youtube.com/watch?v=loQrByYbWZw",
         },
-        { src: "/caotic-cars.png", caption: "the cars" },
-        { src: "/caotic-bank.png", caption: "the bank" },
-        { src: "/caotic-train.png", caption: "the train" },
+        { src: "/caotic-cars.webp", caption: "the cars" },
+        { src: "/caotic-bank.webp", caption: "the bank" },
+        { src: "/caotic-train.webp", caption: "the train" },
       ],
     },
     longform: {
@@ -228,13 +228,13 @@ const story: Story[] = [
     ],
     visual: {
       kind: "product",
-      preview: "/ladda-1.png",
+      preview: "/ladda-1.webp",
       gallery: [
         { type: "video", src: "/ladda-demo-1.mp4" },
         { type: "video", src: "/ladda-demo-2.mp4" },
-        { type: "image", src: "/ladda-1.png" },
-        { type: "image", src: "/ladda-3.png" },
-        { type: "image", src: "/ladda-4.png" },
+        { type: "image", src: "/ladda-1.webp" },
+        { type: "image", src: "/ladda-3.webp" },
+        { type: "image", src: "/ladda-4.webp" },
       ],
     },
   },
@@ -254,8 +254,8 @@ const story: Story[] = [
     ],
     visual: {
       kind: "product",
-      preview: "/hackspain.png",
-      gallery: [{ type: "image", src: "/hackspain.png" }],
+      preview: "/hackspain.webp",
+      gallery: [{ type: "image", src: "/hackspain.webp" }],
     },
   },
 ];

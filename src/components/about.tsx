@@ -37,7 +37,7 @@ export default function About() {
           <span className="inline-flex align-middle ml-1.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/blue-brown.png"
+              src="/blue-brown.webp"
               alt="Blue-Brown Belt"
               className="h-10 w-auto transform -rotate-12 hover:rotate-0 transition-transform duration-300"
             />
