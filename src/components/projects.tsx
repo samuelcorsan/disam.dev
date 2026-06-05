@@ -243,7 +243,7 @@ const story: Story[] = [
     year: "september 2026",
     title: "hackspain",
     description:
-      "organizing spain's biggest youth hackathon. 24 hours in madrid backed by google, cursor, fal.ai, k fund, politécnica de madrid and more. building both the site and the movement to unite young spanish coders and put us on the european map. aiming for 300+ this year, thousands down the line",
+      "organizing spain's biggest youth hackathon. 24 hours in madrid backed by google, cursor, fal.ai, politécnica de madrid and more. building both the site and the movement to unite young spanish coders and put us on the european map. aiming for 300+ this year, thousands down the line",
     url: "https://hackspain.com",
     github: "https://github.com/samuelcorsan/hackspain.com",
     status: { label: "live", tone: "live" },
