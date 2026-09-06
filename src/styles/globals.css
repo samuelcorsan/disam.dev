@@ -97,7 +97,6 @@ body::before {
 }
 
 .portfolio-bio a,
-.project-row a,
 .portfolio-footer a {
   color: var(--ink);
   text-decoration: underline;
@@ -107,7 +106,7 @@ body::before {
   transition: text-decoration-color 150ms ease;
 }
 
-.portfolio :is(a, button, summary):focus-visible {
+.portfolio :is(a, button):focus-visible {
   outline: 2px solid var(--body-ink);
   outline-offset: 5px;
   border-radius: 2px;
@@ -214,11 +213,6 @@ body::before {
   align-items: center;
 }
 
-.project-row p {
-  line-height: 1.6;
-}
-
-.project-row a,
 .project-name {
   margin-right: 6px;
   white-space: nowrap;
@@ -506,7 +500,6 @@ body::before {
   .project-trigger:hover .project-affordance > span { text-decoration-color: var(--ink); }
   .sponsor-link:hover .sponsor-name { text-decoration-color: var(--ink); }
   .portfolio-bio a:hover,
-  .project-row a:hover,
   .portfolio-footer a:hover { text-decoration-color: var(--ink); }
 }
 

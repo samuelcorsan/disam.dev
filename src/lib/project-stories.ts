@@ -1,4 +1,4 @@
-export interface ProjectStory {
+interface ProjectStory {
   paragraphs: string[];
   tech?: string[];
   images?: { src: string; caption?: string }[];
