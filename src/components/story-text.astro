@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: string;
+  glossary?: Record<string, string>;
+}
+const { text, glossary } = Astro.props;
+---
+{text.split(/(\*\*.*?\*\*|\[\[.*?\]\])/g).map((part) => {
+  if (part.startsWith("**")) return <strong>{part.slice(2, -2)}</strong>;
+  if (part.startsWith("[[")) {
+    const term = part.slice(2, -2);
+    return <abbr title={glossary?.[term]}>{term}</abbr>;
+  }
+  return part;
+})}

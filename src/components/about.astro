@@ -1,0 +1,65 @@
+---
+import { hackspainSponsors } from "@/lib/hackspain-sponsors";
+---
+<section class="portfolio-bio" aria-label="About me">
+      <p>
+        Hi, I&apos;m Samuel, a <span role="img" aria-label="Spanish">🇪🇸</span>{" "}
+        <strong>16-year-old</strong> full stack developer from Spain. I&apos;ve been building things{" "}
+        <strong>since I was 9</strong>, starting with Roblox games and finding my way into web
+        development, AI, and products that make people&apos;s lives a little easier.
+      </p>
+      <p>
+        I&apos;m currently a <strong>product engineer</strong> at{" "}
+        <a href="https://quiver.ai" target="_blank" rel="noopener noreferrer">
+          <img src="/svg/quiver.svg" alt="" width={18} height={18} class="quiver-icon" />{" "}
+          QuiverAI
+        </a>, working on AI-native tools for generating, editing, and animating
+        vector graphics. I&apos;ve helped build the <strong>Agent UI, Icons UI, and Fonts UI</strong>,
+        and worked incredibly hard to refine the product and get every detail right.
+      </p>
+      <p>
+        I&apos;m also a co-founder of{" "}
+        <a href="https://hackspain.com" target="_blank" rel="noopener noreferrer">HackSpain</a>,
+        a <strong>36-hour hackathon for 250 young builders</strong> in Madrid,
+        backed by{" "}
+        {hackspainSponsors.map((sponsor, index) => (
+          <Fragment>
+            <span class="sponsor-mention">
+            {index === hackspainSponsors.length - 1 && "and "}
+            <a href={`https://${sponsor.domain}`} target="_blank" rel="noopener noreferrer" class="sponsor-link" aria-label={sponsor.name}>
+              <span class={`sponsor-tile sponsor-tile-${sponsor.logo}`} aria-hidden="true">
+                {sponsor.color ? (
+                  <img src={`/svg/sponsors/${sponsor.logo}.svg`} alt="" width={18} height={18} class="sponsor-icon" />
+                ) : (
+                  <span
+                    class="sponsor-icon sponsor-mask"
+                    style={`mask-image: url(/svg/sponsors/${sponsor.logo}.svg)`}
+                  />
+                )}
+              </span>
+              <span class="sponsor-name">{sponsor.name}</span>
+            </a>
+            {index < hackspainSponsors.length - 1 ? <span class="sponsor-comma">,</span> : ","}
+            </span>
+            {index < hackspainSponsors.length - 1 && " "}
+          </Fragment>
+        ))}
+        {" "}among others.
+      </p>
+      <p>
+        Alongside that, I&apos;ve built and launched <strong>stealth apps</strong> through
+        my own app studio, generating <strong>five figures in revenue</strong>.
+      </p>
+      <p>
+        What keeps me going is pretty simple: watching someone use something
+        I&apos;ve made and hearing that it helped. I want to build a company that
+        makes a lasting, positive impact, give back to my family, and head to the
+        US for college. In the meantime, I&apos;m <strong>learning by building</strong>.
+      </p>
+      <p>
+        Away from the keyboard, I&apos;ve been <strong>practising karate for 8 years</strong> and
+        hold a blue-brown belt. I also play football and enjoy talking through
+        world issues and geopolitics with friends. There&apos;s always another
+        perspective to learn from.
+      </p>
+    </section>

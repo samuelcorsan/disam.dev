@@ -1,0 +1,46 @@
+---
+import "@fontsource-variable/geist";
+import "@/styles/globals.css";
+import Analytics from "@vercel/analytics/astro";
+
+const title = "Samuel Corsan | 16-year-old full stack developer";
+const description = "16-year-old full-stack developer from Spain building AI, web, and infrastructure projects. Passionate about startups, learning fast, and creating companies that matter";
+const url = new URL(Astro.url.pathname, Astro.site);
+const image = new URL("/opengraph-image.png", Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content="Samuel Corsan" />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Samuel Corsan | Portfolio" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <script is:inline>
+      // Apply the saved preference before paint, including existing next-themes preferences.
+      try {
+        const theme = localStorage.getItem("theme");
+        document.documentElement.classList.toggle("dark", theme === "dark" || (theme === "system" && matchMedia("(prefers-color-scheme: dark)").matches));
+      } catch { /* Light remains the default when storage is unavailable. */ }
+    </script>
+  </head>
+  <body class="antialiased">
+    <slot />
+    <Analytics />
+  </body>
+</html>

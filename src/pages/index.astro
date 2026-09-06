@@ -1,0 +1,28 @@
+---
+import Portfolio from "@/layouts/portfolio.astro";
+import ThemeToggle from "@/components/theme-toggle.astro";
+import Hero from "@/components/hero.astro";
+import About from "@/components/about.astro";
+import Projects from "@/components/projects.astro";
+import ContactDock from "@/components/contact-dock.astro";
+---
+<Portfolio>
+  <div class="portfolio">
+    <main class="portfolio-content">
+      <div class="theme-switch-position"><ThemeToggle /></div>
+      <Hero />
+      <About />
+      <Projects />
+      <footer class="portfolio-footer">
+        <h2>Elsewhere</h2>
+        <p>Always happy to talk about an idea, a project, or what you&apos;re building.</p>
+        <nav aria-label="Contact and social links">
+          <a href="mailto:samuel@disam.dev">Email</a>
+          <a href="https://x.com/disamdev" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a href="https://github.com/samuelcorsan" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </footer>
+    </main>
+    <ContactDock />
+  </div>
+</Portfolio>
