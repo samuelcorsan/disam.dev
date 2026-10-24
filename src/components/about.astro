@@ -2,64 +2,49 @@
 import { hackspainSponsors } from "@/lib/hackspain-sponsors";
 ---
 <section class="portfolio-bio" aria-label="About me">
-      <p>
-        Hi, I&apos;m Samuel, a <span role="img" aria-label="Spanish">🇪🇸</span>{" "}
-        <strong>16-year-old</strong> full stack developer from Spain. I&apos;ve been building things{" "}
-        <strong>since I was 9</strong>, starting with Roblox games and finding my way into web
-        development, AI, and products that make people&apos;s lives a little easier.
-      </p>
-      <p>
-        I&apos;m currently a <strong>product engineer</strong> at{" "}
-        <a href="https://quiver.ai" target="_blank" rel="noopener noreferrer">
-          <img src="/svg/quiver.svg" alt="" width={18} height={18} class="quiver-icon" />{" "}
-          QuiverAI
-        </a>, working on AI-native tools for generating, editing, and animating
-        vector graphics. I&apos;ve helped build the <strong>Agent UI, Icons UI, and Fonts UI</strong>,
-        and worked incredibly hard to refine the product and get every detail right.
-      </p>
-      <p>
-        I&apos;m also a co-founder of{" "}
-        <a href="https://hackspain.com" target="_blank" rel="noopener noreferrer">HackSpain</a>,
-        a <strong>36-hour hackathon for 250 young builders</strong> in Madrid,
-        backed by{" "}
-        {hackspainSponsors.map((sponsor, index) => (
-          <Fragment>
-            <span class="sponsor-mention">
-            {index === hackspainSponsors.length - 1 && "and "}
-            <a href={`https://${sponsor.domain}`} target="_blank" rel="noopener noreferrer" class="sponsor-link" aria-label={sponsor.name}>
-              <span class={`sponsor-tile sponsor-tile-${sponsor.logo}`} aria-hidden="true">
-                {sponsor.color ? (
-                  <img src={`/svg/sponsors/${sponsor.logo}.svg`} alt="" width={18} height={18} class="sponsor-icon" />
-                ) : (
-                  <span
-                    class="sponsor-icon sponsor-mask"
-                    style={`mask-image: url(/svg/sponsors/${sponsor.logo}.svg)`}
-                  />
-                )}
-              </span>
-              <span class="sponsor-name">{sponsor.name}</span>
-            </a>
-            {index < hackspainSponsors.length - 1 ? <span class="sponsor-comma">,</span> : ","}
+  <ul class="bio-list">
+    <li>
+      I&apos;m from Spain <span role="img" aria-label="Spanish">🇪🇸</span> and I&apos;ve been building since I was <strong>9</strong>.
+      <span class="bio-detail">I started with a Roblox game that reached <strong>20K peak players</strong> and <strong>223K combined video views</strong>.</span>
+    </li>
+    <li>I&apos;m a <strong class="current-role">product engineer at <a href="https://quiver.ai" target="_blank" rel="noopener noreferrer"><img class="quiver-icon" src="/svg/quiver.svg" alt="" width="18" height="18" />{" "}QuiverAI</a></strong>, building AI tools for vector graphics. I&apos;m working my ass off to build the next-generation platform for designers.</li>
+    <li>
+      I co-founded <a href="https://hackspain.com" target="_blank" rel="noopener noreferrer">HackSpain</a>, a 36-hour hackathon bringing together <strong>250 young builders</strong> in Madrid.{" "}
+      <span class="sponsor-section">
+        <span id="sponsors-heading" class="sponsor-label">Backed by</span>{" "}
+        <span class="sponsor-list" role="list" aria-labelledby="sponsors-heading">
+          {hackspainSponsors.map((sponsor) => (
+            <span role="listitem">
+              <a href={`https://${sponsor.domain}`} target="_blank" rel="noopener noreferrer" class="sponsor-link" aria-label={sponsor.name}>
+                <span class={`sponsor-tile sponsor-tile-${sponsor.logo}`} aria-hidden="true">
+                  {sponsor.color ? (
+                    <img src={`/svg/sponsors/${sponsor.logo}.svg`} alt="" width={18} height={18} class="sponsor-icon" />
+                  ) : (
+                    <span class="sponsor-icon sponsor-mask" style={`mask-image: url(/svg/sponsors/${sponsor.logo}.svg)`} />
+                  )}
+                </span>
+                <span class="sponsor-name" aria-hidden="true">{sponsor.name}</span>
+              </a>
             </span>
-            {index < hackspainSponsors.length - 1 && " "}
-          </Fragment>
-        ))}
-        {" "}among others.
-      </p>
-      <p>
-        Alongside that, I&apos;ve built and launched <strong>stealth apps</strong> through
-        my own app studio, generating <strong>five figures in revenue</strong>.
-      </p>
-      <p>
-        What keeps me going is pretty simple: watching someone use something
-        I&apos;ve made and hearing that it helped. I want to build a company that
-        makes a lasting, positive impact, give back to my family, and head to the
-        US for college. In the meantime, I&apos;m <strong>learning by building</strong>.
-      </p>
-      <p>
-        Away from the keyboard, I&apos;ve been <strong>practising karate for 8 years</strong> and
-        hold a blue-brown belt. I also play football and enjoy talking through
-        world issues and geopolitics with friends. There&apos;s always another
-        perspective to learn from.
-      </p>
-    </section>
+          ))}
+        </span>
+      </span>
+    </li>
+    <li>I also run my own app studio, where I&apos;ve launched stealth apps generating <strong>five figures in revenue</strong>.</li>
+    <li>Outside of coding, I&apos;ve been practising karate for eight years and hold a blue-brown belt. I also play football and enjoy discussing geopolitics with friends.</li>
+    <li>I want to build a company that makes a positive impact and go to college in the US. For now, I&apos;m learning by building.</li>
+  </ul>
+</section>
+<script>
+  document.querySelectorAll<HTMLAnchorElement>(".sponsor-link").forEach((link) => {
+    const name = link.querySelector<HTMLElement>(".sponsor-name")!;
+    const positionName = () => {
+      const room = document.documentElement.clientWidth - link.getBoundingClientRect().right - 24;
+      link.dataset.labelSide = room < name.offsetWidth + 8 ? "left" : "right";
+    };
+    link.addEventListener("pointerenter", positionName);
+    link.addEventListener("focus", positionName);
+    window.addEventListener("resize", positionName);
+    positionName();
+  });
+</script>

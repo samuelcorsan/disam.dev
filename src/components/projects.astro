@@ -1,49 +1,40 @@
 ---
 import { projects } from "@/lib/projects";
 import { projectStories } from "@/lib/project-stories";
-import { hackspainSponsors } from "@/lib/hackspain-sponsors";
 import StoryText from "./story-text.astro";
 ---
 <section class="portfolio-projects" aria-labelledby="projects-heading">
-  <h2 id="projects-heading">Projects</h2>
+  <h2 id="projects-heading">Personal projects</h2>
   <ul class="project-list">
     {projects.map((project) => {
       const story = projectStories[project.tone];
       const panelId = `project-story-${project.tone}`;
       const triggerId = `project-trigger-${project.tone}`;
+      const hasStory = project.tone !== "hackspain";
+      const ProjectTrigger = hasStory ? "button" : "a";
       return (
-        <li class="project-accordion" data-open="false" data-instant="false">
+        <li class:list={["project-item", { "project-accordion": hasStory }]} data-open="false" data-instant="false">
           <h3 class="project-heading">
-            <button id={triggerId} type="button" class="project-row project-trigger" aria-expanded="false" aria-controls={panelId}>
-              {project.logo && (
-                <span class="project-mark" aria-hidden="true">
-                  <img src={project.logo} alt="" width="30" height="30" />
-                </span>
-              )}
+            <ProjectTrigger id={triggerId} type={hasStory ? "button" : undefined} class:list={["project-row", hasStory ? "project-trigger" : "project-link"]} href={hasStory ? undefined : project.href} target={hasStory ? undefined : "_blank"} rel={hasStory ? undefined : "noopener noreferrer"} aria-expanded={hasStory ? "false" : undefined} aria-controls={hasStory ? panelId : undefined}>
               <span class="project-description">
-                <span class="project-name">{project.name}</span>{" "}
+                <span class="project-name">
+                  {project.logo && <img class="project-icon" src={project.logo} alt="" width="20" height="20" />}
+                  {project.name}
+                </span>
                 <span class="project-role">{project.description}</span>
               </span>
               <span class="project-date">{project.year} <span>({project.age}yrs old)</span></span>
-              <span class="project-affordance">
+              {hasStory && <span class="project-affordance">
                 <span data-story-label>Read story</span>
                 <svg class="project-disclosure" width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
                   <path d="m4 6 4 4 4-4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </span>
-            </button>
+              </span>}
+            </ProjectTrigger>
           </h3>
-          <div id={panelId} role="region" aria-labelledby={triggerId} aria-hidden="true" inert class="project-story-panel" style="height: 0">
+          {hasStory && <div id={panelId} role="region" aria-labelledby={triggerId} aria-hidden="true" inert class="project-story-panel" style="height: 0">
             <div class="project-story">
               {story.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-              {project.tone === "hackspain" && (
-                <p>Backed by {hackspainSponsors.map((sponsor, index) => (
-                  <span>
-                    <a href={`https://${sponsor.domain}`} target="_blank" rel="noopener noreferrer">{sponsor.name}</a>
-                    {index < hackspainSponsors.length - 2 ? ", " : index === hackspainSponsors.length - 2 ? ", and " : ", among others."}
-                  </span>
-                ))}</p>
-              )}
               {story.tech && <p class="project-technologies">{story.tech.join(" · ")}</p>}
               {story.videos && (
                 <div class="project-story-gallery">
@@ -84,7 +75,7 @@ import StoryText from "./story-text.astro";
                 <button type="button" data-close-story>Close story <span aria-hidden="true">↑</span></button>
               </div>
             </div>
-          </div>
+          </div>}
         </li>
       );
     })}

@@ -1,16 +1,7 @@
 export const projects = [
   {
-    name: "QuiverAI",
-    description: "Product engineer",
-    year: "2026–Present",
-    age: 16,
-    href: "https://quiver.ai",
-    logo: "/svg/quiver.svg",
-    tone: "quiver",
-  },
-  {
     name: "HackSpain",
-    description: "Co-founder",
+    description: "I co-founded a 36-hour hackathon in Madrid that brings together 250 young builders.",
     year: "2026–Present",
     age: 16,
     href: "https://hackspain.com",
@@ -19,14 +10,15 @@ export const projects = [
   },
   {
     name: "Ladda",
-    description: "Fashion e-commerce",
+    description: "A fashion shopping app where you swipe through clothes, try them on with AI, and check out in one tap.",
     year: "2026",
     age: 16,
+    logo: "/ladda-icon.png",
     tone: "ladda",
   },
   {
     name: "Avalio",
-    description: "Investing simulator",
+    description: "A stock market simulator that helps students practise investing in an interface that feels like a real broker.",
     year: "2025–26",
     age: 15,
     href: "https://avalio.markets",
@@ -34,7 +26,7 @@ export const projects = [
   },
   {
     name: "fellows.best",
-    description: "Tech fellowships",
+    description: "A directory that brings tech fellowships into one place, making it easier to find opportunities across different programs.",
     year: "2024–26",
     age: 14,
     href: "https://fellows.best/",
@@ -42,7 +34,7 @@ export const projects = [
   },
   {
     name: "Syntara AI",
-    description: "AI reasoning",
+    description: "An experiment in bringing o1-style reasoning to GPT-4o through repeated refinement, without fine-tuning.",
     year: "2024",
     age: 14,
     href: "https://github.com/samuelcorsan/syntara-ai",
@@ -50,14 +42,14 @@ export const projects = [
   },
   {
     name: "Freelance",
-    description: "Web development",
+    description: "I built websites and web apps for clients, learning to turn ideas into products while working with real deadlines.",
     year: "2023–24",
     age: 13,
     tone: "freelance",
   },
   {
     name: "Caotic Robbers",
-    description: "Roblox game",
+    description: "A Roblox game I started building at nine, reaching 20K peak players and 223K combined video views.",
     year: "2020–22",
     age: 9,
     href: "https://www.youtube.com/watch?v=loQrByYbWZw",
